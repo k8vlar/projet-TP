@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="Image/fireCamp.png">
+    <title> Stages Internationaux de Survie</title>
+</head>
+<body class="parallax">
+<header>
+    <div class="header">
+        <div class="logoTitre">
+             <h1>
+                <div>
+                    <img class="mainlogo" src="/Image/fireCampNB.png" alt="feu de camp">
+                </div>
+             </h1>
+             <p class="title">FRAME SURVIVAL</p>
+        </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="accueil" href="#">ACCUEIL</a></li>
+                        <li><a class="stage" href="/Link/stageType.html">STAGES</a></li>
+                        <li><a class="contacts" href="/Link/Contacts.html">CONTACTS</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </div> 
+    <div class="menu">
+        <!-- Utilisation d'une checkbox -->
+        <input type="checkbox" id="hamburger">
+        <!-- Label de la checkbox -->
+        <label id="hamburger-logo" for="hamburger">☰</label>
+        <!-- Le reste du menu -->
+        <nav class="burgerLinks">
+          <a href="#">Accueil</a>
+          <a href="/Link/stageType.html">Stages</a>
+          <a href="/Link/Contacts.html">Contacts</a>
+        </nav>
+    </div>
+
+</header>
+<main>
+
+    <section  >
+        <section class="formContainer">
+            <form method="get" action="formFirst">
+            
+                <p class="contactContainer">
+                    <fieldset>
+                        <label>Votre prenom</label>: <input type="text" name="prenom" id="prenom" size="50" maxlength="20" placeholder="Inscrivez votre prénom..." value="">
+                        <label>Votre nom</label>: <input type="text" name="nom" id="nom" size="50" maxlength="20" placeholder="Inscrivez votre nom..." value="">
+                        <label>email</label>: <input type="email" name="email" id="email" size="50" maxlength="20" placeholder="Inscrivez votre email..." value="">
+    <!-- ---------------------------------ajouter choix du nombre de participants ---------------------------------->
+                    </fieldset>
+                </p>
+                <p> 
+                    <fieldset class="objectschoice">
+                        <legend>Choisissez 2 objets maximums sur les 10 que vous pourrez utiliser pendant le stage</legend>
+                        <label for="objectschoice"></label>: <input type="checkbox" name="couteau" id="couteau">couteau
+                        <label for="objectschoice"></label>: <input type="checkbox" name="allume-feu" id="allume-feu">allume-feu
+                        <label for="objectschoice"></label>: <input type="checkbox" name="casserole" id="casserole">casserole
+                        <label for="objectschoice"></label>: <input type="checkbox" name="moustiquaire" id="moustiquaire">moustiquaire
+                        <label for="objectschoice"></label>: <input type="checkbox" name="hachette" id="hachette">hachette
+                        <label for="objectschoice"></label>: <input type="checkbox" name="scotch" id="scotch">scotch
+                        <label for="objectschoice"></label>: <input type="checkbox" name="fil de fer" id="fil de fer">fil de fer
+                        <label for="objectschoice"></label>: <input type="checkbox" name="bache" id="bache">bache
+                        <label for="objectschoice"></label>: <input type="checkbox" name="hameçons" id="hameçons">hameçons
+                        <label for="objectschoice"></label>: <input type="checkbox" name="arc" id="arc">arc
+                    </fieldset>
+                </p>
+                <!-------------------- comment limiter le choix a 2 items sur 10-------------------------------------->
+                <p>
+                    <fieldset class="levelType">
+                        <label>Niveau Débutant</label>: <input type="radio" name="level1" id="level1" size="50" value="Niveau débutant">
+                        <label>Niveau Intermédiaire</label>: <input type="radio" name="age2" id="age2" size="50" value="Niveau intermédiaire">
+                        <label>Niveau Expert</label>: <input type="radio" name="age3" id="age3" size="50"  value="Niveau Expert">
+                    </fieldset>
+                </p>
+                <P class="comments">
+                    <textarea name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Inscrivez toute demande complémentaire (150 caractères maximums)..." maxlength="150"></textarea>
+                </P>
+                <p class="country">
+                    <label for="pays">de quel pays venez vous?
+                        <select name="pays" id="pays">
+                            <option value="sénégal">Sénégal</option>
+                            <option value="Brésil">Brésil</option>
+                            <option value="France">France</option>
+                            <option value="Italie">Italie</option>
+                        </select>
+                            
+                    </label>
+                </p>
+                <div>
+                    <fieldset class="validationForm">
+                        <p>Un clic pour l'enfer</p>
+                        <input type="submit" value="inscription"> 
+                    </fieldset>
+                </div>
+            </form>
+    </section>
+    <section >
+        <p></p>
+    </section>
+</main>
+<footer>
+    <div class="footer">
+        <div class="logoFooter">
+            <a href="/index.html#ancre1"><img class="downLogo" src="/Image/fireCampNB.png" alt="feu de camp noir et blanc"></a>
+<!-- ---------------------ancre pour un retour en haut de la page index.html --------------------------- -->
+
+        </div>
+    </div>
+            <div class="footerContainer">
+                <nav>
+                    <ul>
+                        <li><a href="Navigation/facebook.html"> 
+                            <img class="socialMedia" src="/Image/facebookIcon.png" alt="logo facebook"></a></li>
+                        <li><a href="Navigation/instagram.html"> 
+                            <img class="socialMedia" src="/Image/instagram.png" alt="logo instagram"></a></li>
+                        <li><a href="www.github.com/k8vlar/">
+                            <img class="socialMedia" src="/Image/github.png" alt="logo instagram"></a></li>
+                        <li><a href="/Link/legalmentions.html"> <p class="legalMention">Mentions légales</p></a></li>
+                    </ul>
+                </nav>
+            </div> 
+</footer>
+</body>
+</html>
