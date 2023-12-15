@@ -8,18 +8,19 @@
     position: fixed;
     justify-content: space-between; 
     background-color: #37633f;
-    width: 1590px;
+    width: 1583px;
     z-index: 999;
 }
+
 
 ul li a{
     text-decoration: none;
     margin-right: 20px;
 
 }
-li{
+nav li{
     display: inline;
-    list-style: none;
+    list-style-type: none;
     
 }
 
@@ -28,10 +29,14 @@ a{
     font-size: 1.5em;
     letter-spacing: 5px;
     color: #efe3c5;
+    text-decoration: none;
+    max-height: 50px;
     
 }
+
+
 /*--------------------------------------- LOGO ET TITRE DU SITE------------------------------------------------------------ */
-.mainlogo{
+.mainLogo{
     width: 50px;
 }
 .logoTitre{
@@ -47,11 +52,21 @@ h1{
     font-size: 2em;
     color: #efe3c5;
     width: 350px;
+    text-shadow: 5px 5px 0 black;
 }
 .logoTitre{
     display: flex;
     flex-direction: row;
     width: 400px;
+}
+.accueil{
+    text-shadow: 3px 3px 0 black;
+}
+.stage{
+    text-shadow: 3px 3px 0 black;
+}
+.contacts{
+    text-shadow: 3px 3px 0 black;
 }
 /*------------------------------------------- FIN LOGO ET TITRE DU SITE-------------------------------------------------------------- */
 
@@ -64,52 +79,54 @@ h1{
     justify-content: center;
     margin-bottom: 50px;
     margin-left: 10px;
-    right: 200px;
+    
 
 }
 .worldMap{
     display: flex;
     justify-content: center;
-    width: 1590px;
+    width: 1580px;
+    padding-top: 50px;
     
 }
+
 
 /* ------------------------------------------------LES DIFFERENTS PINS ----------------------------------------------------------------*/
 .amazonie{
     position: relative;
     z-index: 1;
-    right: 1060px;
+    right: 850px;
     color: black;
-    top: 400px;
+    top: 420px;
 }
 .namibie{
     position: relative;
     z-index: 1;
-    right: 810px;
+    right: 610px;
     top: 520px;
 }
 .carpates{
     position: relative;
     z-index: 1;
-    right:790px;
+    right:590px;
     top:230px;
 }
 .philippines{
     position: relative;
     z-index: 1;
-    right: 510px;
+    right: 310px;
     top: 380px;
 }
 .hourtin{
     position: relative;
     z-index: 1;
-    right: 920px;
+    right: 720px;
     top: 225px;
 }
 .maroc{
     position: relative;
     z-index: 1;
-    right: 965px;
+    right: 765px;
     top: 295px;
 }
 .pinRouge1{
@@ -129,7 +146,7 @@ h1{
     z-index: 2;
     top: 200px;
     size: 5px;
-    right: 260px;
+    right: 80px;
 }
 .legendContainer{
     width: 20px;
@@ -142,26 +159,7 @@ h1{
     text-decoration: underline;
     font-family: bold;
     margin-right: 5px;
-    width: 260px;
-}
-.titleMap{
-    font-size: 4em;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    z-index: 3;
-    top: 150px;
-    left: 700px;
-    color: #b84446;
-    text-decoration: underline;
-
-    
-}
-.titleMapContainer{
-    position: relative;
-    z-index: 3;
-    width: 500px;
-    height: 150px;
+    width: 250px;
 }
 /* -----------------------------------------------------FIN PINS------------------------------------------------------ */
 
@@ -173,13 +171,13 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     color: #b84446;
-    width: 1580px;
+    width: 1583px;
     height: 800px;
     text-align: center;
     justify-content: space-around;
-    margin-bottom: 200px;
     font-size: 2em;
     padding: 20px;
+    text-shadow: 3px 3px 0 black;
 }
 .projectText{
     display: flex;
@@ -188,25 +186,30 @@ h1{
 .linkKnown{
     color: #b84446;
     font-family: sans-serif 2em;
-    text-decoration: none;
+    box-shadow: 0px 0px 7px 7px #b84446;
+    width: 500px;
 }
+.linkKnownBox{
+    display: flex;
+    justify-content: center;
+    text-shadow: 3px 3px 0 black;
+}
+
 h2{
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 3px 0 black;
 }
 
 
 /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
 .downLogo{
-    display: flex;
-    justify-content: right;
-    margin-right: 65px;
-    width: 1.5em;
+    width: 24px;
 }
 
 .socialMedia{
-width: 1em;
-margin-right: 2em;
+    width: 1em;
+    margin-right: 2em;
 }
 .legalMention{
     color: black;
@@ -218,22 +221,92 @@ margin-right: 2em;
  
 }
 .footer{
-    display: flex;
-    justify-content: center; 
-    background-color: #37633f;
-    width: 1590px;
+    width: 24px;
     z-index: 999;
-    padding-top: 15px;
-    padding-right: 65px;
+    margin-right: 48px;
+    
+}
+.footerContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #37633f;
+    padding-top: 35px;
+    width: 1583px;
 }
 #ancre{
     height: 15px;
     padding-right: 15px;
 }
+/* ----------------------------------------------MENU BURGER------------------------------------------------------------ -*/
+.menu {
+    /* Pour que le menu reste en place quand on scroll vers le bas ou haut*/
+    position: fixed;
+    display: none;
+    /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+   width: 0;
+  }
+  
+  #hamburger {
+    /* Pour que la checkbox ne s'affiche pas */
+    display: none;
+  }
+  
+  #hamburger-logo {
+    /* Pour que le curseur soit un pointeur */
+    cursor: pointer;
+    background: #b84446;
+    width: 100px;
+    display: block;
+    /* pour que la cible soit encrée par l'action donnée: ici le clic du checkbox: donc suit l'action donnée */
+    color: #efe3c5;
+    font-size: 0.6em;
+    border-radius: 25px;
+    /* Pour que le menu hamburger s'affiche toujours */
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    transform: translateX(-84px);
+    padding: 10px;
+  }
+  
+  .burgerLinks {
+    display: flex;
+    flex-direction: column;
+    background: #b84446;
+    overflow: hidden;
+    font-size: 0.6em;
+    border-radius: 25px;
+    width: 100px;
+    /* Pour que les liens soient "rangés" par défaut */
+    transform: translateX(-100px);
+  }
+  
+#hamburger-logo,
+.burgerLinks{
+    /* Pour qu'il y ait une animation */
+    transition: 0.7s;
+  }
+  
+  /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+  #hamburger:checked ~ #hamburger-logo,
+  #hamburger:checked ~ .burgerLinks{
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+    /* fait revenir le menu a son etat initial */
+  }
+  
+.burgerLinks a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+.burgerLinks a:hover {
+    background: #efe3c5;
+  }
 
 /* --------------------------------------------page stageType--------------------------------------------------- */
 .parallax{
-    background-image: url(/Image/objectSurvival.jpg);
+    background-image: url(Image/objectSurvival.jpg);
     /* definit mon image */
     height: 100%;
     /* peut importe la taille de l'image elle restera a 100% */
@@ -244,4 +317,786 @@ margin-right: 2em;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* ---------------------------------------------------GRID-------------------------------------------------------------- */
+.conTainerGrid{
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 100px 200px 400px 800px;
+}
+.sectionMargin{
+    gap: 20px;
+    padding-top: 50px;
+}
+.logoGrid{
+    width: 164px;
+    height: 164px;
+}
+.imageGrid{
+    width: 500px;
+    height: 331px;
+}
+.gridTextContainer{
+    max-width: 500px;
+    box-shadow: #37633f;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 10px;
+}
+.textContainer{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gridTitles{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #b84446;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-top: 20px;
     
+}
+.gridLogos{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px 0;
+} 
+.gridText{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px 0;
+    color: #b84446;
+}
+.gridIllustration{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+/* 3 colonnes créés pour 4 lignes dans les placements via grid-column et grid-row unité soit fr soit px */
+/* 5 niveaux de rows pour créer 5 hauteurs via grid-template-rows */
+/* gap pour faire séparation entre cases ... margin et paddin ne donne pas les memes resultats */
+
+
+.boxgrid1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding: 0 5px;
+    /* 3 colonnes resulte de 4 niveaux dans colonne */
+    color: gray;
+}
+.boxgrid2{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding: 0 5px;
+    color: orangered;
+}
+.boxgrid3{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding: 0 5px;
+    color: red;
+}
+.boxgrid4{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid5{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid6{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid7{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+    
+}
+.boxgrid8{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid9{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid10{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid11{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+.boxgrid12{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    box-shadow: 5px 5px 5px 5px #37633f;
+    padding:  5px;
+}
+
+
+/* --------------------------------------------------Page CONTACTS -------------------------------------------------------------*/
+.mapAdresse{
+    display: flex;
+    justify-content: center;
+    background-color: #b844466b;
+    padding: 50px 0;
+}
+.titleMapAdress{
+    display: flex;
+    justify-content: center;
+    background-color: #b844466b;
+    padding: 20px 0;
+    color: #efe3c5;
+    font-size: 4em;
+    padding-top: 60px;
+}
+/* -----------------------------------------------------FORMULAIRE---------------------------------------------------- */
+fieldset{
+    display: flex;
+    justify-content: flex-start;
+    border: #b84446;
+    margin: 10px 0;
+    
+}
+.formContainer{
+    display: flex;
+    justify-content: center;
+    color: #efe3c5;
+    
+    padding-left: 60px;
+    padding: 50px 0;
+    margin-right: 100px;
+}
+.formContainerTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+.titleLabelForm{
+    font-size: 1.5em;
+    width: 200px;
+    color: #37633f;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 black;
+    font-weight: bolder;
+    margin-left: 200px;
+}
+.titleLabelForm2{
+    font-size: 1.5em;
+    width: 1000px;
+    color: #37633f;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 3px 3px 0 black;
+    margin-left: 200px;
+}
+.titleLabelForm3{
+    font-size: 1.5em;
+    margin-right: 500px;
+    color: #37633f;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 3px 3px 0 black;
+    margin-left: 200px;
+}
+#commentaires{
+    margin-left: 61
+    0px;
+}
+.objectsChoiceTitle{
+    font-size: 1.5em;
+    
+    margin-left: 200px;
+}
+.objectsChoice{
+    margin:0 10px;
+}
+.checkLabelForm{
+    font-size: 1.5em;
+    margin:0 10px;
+}
+.particantsNumber{
+    padding-left: 20px;
+}
+.validationTitle{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+}
+.validationForm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.levelChoice{
+    display: flex;
+    justify-content: right;
+    padding-left: 50px;
+}
+.levelChoice{
+    display: flex;
+    justify-content: end;
+}
+.textLegalMention{
+    padding-top: 50px;
+}
+
+
+/* -----------------------------------------------MEDIA QUERY------------------------------------------------------------------ */
+/* ------------POUR TABLETTES 800px ----------*/
+@media screen and (max-width: 800px){
+   /* -------------------------------------------HEADER------------------------------------------------------------------------ */
+    .menu{
+        width: 799px;
+    }
+    .logoTitre{
+        width: 200px;
+    }
+    .header{
+        display: flex;
+        position: fixed;
+        justify-content: space-between; 
+        background-color: #37633f;
+        width: 799px;
+        z-index: 999;
+    }
+    .title{
+        font-size: 1.2em;
+    }
+    a{
+        font-size: 1em;
+    }
+   
+    /* ------------------------------------------FIN HEADER----------------------------------------------------------------------- */
+        /*------------------------------- mapworld ------------------------------------------------------*/
+    .worldMapImage{
+        width: 550px;
+        position: relative;
+        z-index: 0;
+       
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-left: 10px; }
+
+    .worldMap{
+        width: 550px;
+        margin-left: 116px;
+        position: relative;
+     
+    }
+
+
+        .legend{
+            position: relative;
+            z-index: 2;
+            top: 100px;
+            size: 3px;
+           
+        }
+        .legendContainer{
+            width: 13px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .legendTitle{
+            font-size: 0.7em;
+            text-decoration: underline;
+            font-family: bold;
+           
+            width: 120px;
+        }
+        .philippines{
+           top: 174px;
+            right: 179px;
+        }
+        .carpates{
+            top: 105px;
+             right: 294px;
+         }
+         .hourtin{
+            top: 105px;
+             right: 380px;
+         }
+         .maroc{
+            top: 142px;
+             right: 415px;
+         }
+         .namibie{
+            top: 235px;
+             right: 295px;
+         }
+         .amazonie{
+            top: 195px;
+             right: 395px;
+         }
+/* -----------------------------------------------FIN MAPWORLD---------------------------------------------------------- */
+/* -----------------------------------------IMAGE FORET ACCUEIL ----------------------------------------------------------------*/
+        .subtitleAndImage{
+            width: 799px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+        }
+        .textAccueil{
+            font-size: 0.7em;
+            width: 600px;
+            text-shadow: 1px 1px 0 black;
+            
+        }
+        h2{
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 0 black;
+            width: 600px;
+            
+        }
+        .linkKnown{
+            color: #b84446;
+            font-family: sans-serif 2em;
+            box-shadow: 0px 0px 7px 7px #b84446;
+            width: 300px;
+        }
+        .linkKnownBox{
+            display: flex;
+            justify-content: center;
+            text-shadow: 1.5px 1.5px 0 black;
+        }
+        .textLinkKnown{
+            font-size: 0.5em;
+        }
+/* -------------------------------------------------FOOTER --------------------------------------------------------------------*/
+        .footerContainer{
+            width: 799px;
+            display: flex;
+            justify-content: center;
+            padding-left: 120px;
+        }
+        .downLogo{
+            width: 16px;
+            height: 16px;
+        }
+        .legalMention{
+           right: 30px;
+           position: relative;
+           font-size: 0.6em;
+        }
+        .footer{
+            height: 24px;
+        }
+        
+/* -------------------------------------------FIN PAGE ACCUEIL --------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------PAGE STAGES---------------------------------------------------------------------- */
+.logoGrid{
+    width: 67px;
+    height: 67px;
+}
+.gridLogos{
+    padding: 10px 0;
+}
+.gridTitles{
+    font-size: 0.9em;
+    padding: 10px 0;
+}
+.textContainer{
+    font-size: 0.8em;
+    padding: 10px 0;
+}
+.gridText{
+    font-size: 0.6em;
+}
+.gridTextContainer{
+    width: 210px;
+}
+.sectionMargin{
+    gap: 5px;
+    padding-top: 50px;
+}
+.imageGrid{
+    width: 210px;
+    height: 145px;
+}
+.boxgrid3{
+    margin-right: 30px;
+}
+.boxgrid2{
+    margin-left: 15px;
+}
+.boxgrid{
+    margin-left: 20px
+}
+/* -------------------------------------------PAGE CONTACTS FORMULAIRE------------------------------------------------------- */
+.mapAdresse{
+    padding: 20px 0;
+    background-color: #b844466b;
+}
+.titleMapAdress{
+    padding: 10px 0;
+    color: #efe3c5;
+    font-size: 2em;
+    padding-top: 60px;
+    background-color: #b844466b;
+   
+}
+.imageAdress{
+    width: 300px;
+
+}
+fieldset{
+    width: 800px;
+}
+/* --------FORMULAIRE--------------- */
+.formContainerTitle{
+    font-size: 2em;
+}
+.titleLabelForm{
+    font-size: 1em;
+    width: 100px;
+    margin-left: 200px;
+    text-shadow: 1px 1px 0 black;
+}
+.titleLabelForm2{
+    font-size: 1em;
+    width: 400px;
+    text-shadow: 1px 1px 0 black;
+}
+.titleLabelForm3{
+    font-size: 1em;
+    padding-left: 100px;
+    text-shadow: 1px 1px 0 black;
+}
+.comments{
+    width: 100px;
+}
+.formContainer{
+    
+    padding-left: 20px;
+    padding: 20px 0;
+}
+/* --------------------------------PAGE LEGAL MENTION-------------------------------------------------------------- */
+.textLegalMention{
+    max-width: 800px;
+}
+}
+/* ------------POUR TABLETTES 400px ----------*/
+@media screen and (max-width: 400px){
+    /* -------------------------------------------HEADER------------------------------------------------------------------------ */
+    .menu{
+        display: block;
+        width: 200px;
+        height: 50px;
+        position: relative;
+        position: fixed;
+        z-index: 99;
+    }
+    .header{
+        display: none;
+    }
+    .title{
+         font-size: 1.2em;
+     }
+     a{
+         font-size: 1em;
+     }
+/* ------------------------------------------FIN HEADER----------------------------------------------------------------------- */
+/*------------------------------- mapworld ------------------------------------------------------*/
+        .worldMapImage{
+         width: 400px;
+         height: 200px;
+         position: relative;
+         z-index: 0;
+         display: flex;
+         justify-content: center;
+         
+         
+         }
+ 
+        .worldMap{
+         width:400px;
+         height: 100px;
+         position: relative;
+         z-index: 0;
+         display: flex;
+         flex-direction: column-reverse;
+         align-items: center;
+         bottom: 220px;
+         padding-right: 250px;
+         
+    
+     }
+        .legend{
+            position: relative;
+            z-index: 2;
+            size: 3px;
+            width: 400px;
+            height: 50px;
+            padding-top:  460px;
+            padding-left: 200px;
+
+        
+        }
+        .legendContainer{
+            width: 8px;
+            height: 4px;
+            display: flex;
+            flex-direction: row;
+           
+        
+        }
+        .legendTitle{
+            font-size: 0.7em;
+            text-decoration: underline;
+            font-family: bold;
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+        }
+        .pinRouge1{
+            width: 5px;
+            height: 7px;
+        }
+        .pinOrange{
+            width: 5px;
+            height: 7px;
+        }
+        .pinNB{
+            width: 5px;
+            height: 7px;
+        }
+        .philippines{
+            top: 212px;
+            left: 124px;
+        }
+        .carpates{
+            top: 145px;
+            left: 26px;
+        }
+        .hourtin{
+            top: 184px;
+            right: 7px;
+        }
+        .maroc{
+            top: 220px;
+            right: 15px;
+        }
+        .namibie{
+            top: 210px;
+            left: 11px;
+        }
+        .amazonie{
+            top: 165px;
+            right: 75px;
+        }
+ /* -----------------------------------------------FIN MAPWORLD---------------------------------------------------------- */
+ /* -----------------------------------------IMAGE FORET ACCUEIL ----------------------------------------------------------------*/
+        .subtitleAndImage{
+            width: 399px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            top: 240px;
+            
+            
+        }
+        .textAccueil{
+            font-size: 0.3em;
+            width: 300px;
+            text-shadow: 1px 1px 0 black;
+            
+        }
+        h2{
+            font-size: 0.4em;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 1px 1px 0 black;
+            width: 300px;
+            
+        }
+        .linkKnown{
+            color: #b84446;
+            font-family: sans-serif 1em;
+            box-shadow: 0px 0px 5px 5px #b84446;
+            width: 200px;
+        }
+        .linkKnownBox{
+            display: flex;
+            justify-content: center;
+            text-shadow: 1.5px 1.5px 0 black;
+        }
+        .textLinkKnown{
+            font-size: 0.3em;
+        }
+        .projectText{
+            bottom: 50px;
+        }
+/* -------------------------------------------------FOOTER --------------------------------------------------------------------*/
+        .footerContainer{
+            width: 399px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 999;
+            height: 50px;
+            top: 240px;
+            
+        }
+        .downLogo{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            z-index: 2;
+            bottom: 9px;
+        }
+        .legalMention{
+        right: 30px;
+        position: relative;
+        font-size: 0.2em;
+        margin-top: 0px;
+        }
+        .footer{
+            height: 24px;
+        }
+       
+ /* -------------------------------------------FIN PAGE ACCUEIL --------------------------------------------------------------------*/
+ 
+ 
+ /* ----------------------------------------------PAGE STAGES---------------------------------------------------------------------- */
+    .logoGrid{
+        width: 30px;
+        height: 30px;
+    }
+    .gridLogos{
+        padding: 5px 0;
+    }
+    .gridTitles{
+        font-size: 0.6em;
+        padding-bottom: 5px;
+    }
+    .textContainer{
+        font-size: 0.2em;
+        padding: 4px 0;
+    }
+    .gridText{
+        font-size: 0.6em;
+        padding: 5px 0;
+        
+    }
+    .gridTextContainer{
+        width: 98px;
+        padding: 2px;
+        font-size: 0.1em;
+    }
+    .sectionMargin{
+        gap: 2px;
+        padding-top: 10px;
+    }
+    .imageGrid{
+        width: 98px;
+        height: 62px;
+    }
+    .gridIllustration{
+        padding: 5px 0;
+        box-shadow: 0;
+    }
+    .boxgrid3{
+        margin-left: 4px;
+        padding-left: 8px;
+      
+    }
+    .boxgrid2{
+        margin-left: 9px;
+       
+    }
+    .boxgrid1{
+        margin-left: 9px
+    }
+ /* -------------------------------------------PAGE CONTACTS FORMULAIRE------------------------------------------------------- */
+    .mapAdresse{
+        padding: 20px 0;
+    }
+    .titleMapAdress{
+        padding: 10px 0;
+        color: #efe3c5;
+        font-size: 1em;
+        padding-top: 60px;
+    }
+    .imageAdress{
+        width: 150px;
+    }
+ /* --------FORMULAIRE--------------- */
+    .formContainerTitle{
+        font-size: 1em;
+    }
+    .titleLabelForm{
+        font-size: 0.5em;
+        width: 100px;
+        margin-left: 50px
+    }
+    .titleLabelForm2{
+        font-size: 0.5em;
+        width: 400px;
+    }
+    .titleLabelForm3{
+        font-size: 0.5em;
+        padding-left: 100px;
+    }
+    .comments{
+        width: 100px;
+    }
+    .formContainer{
+        
+        padding-left: 20px;
+        padding: 20px 0;
+    }
+    .objectsChoiceTitle{
+        font-size: 0.5em;
+    }
+    .objectsChoice{
+        font-size: 0.4em;
+    }
+    fieldset{
+        font-size: 0.3em;
+    }
+    .checkLabelForm{
+        font-size: 0.4em;
+
+    }
+    }
