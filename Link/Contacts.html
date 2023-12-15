@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="Image/fireCamp.png">
-    <title> Stages Internationaux de Survie</title>
+    <link rel="icon" href="/Image/fireCamp.png">
+    <title> Contacts </title>
 </head>
 <body class="parallax">
 <header>
@@ -13,7 +13,9 @@
         <div class="logoTitre">
              <h1>
                 <div>
-                    <img class="mainlogo" src="/Image/fireCampNB.png" alt="feu de camp">
+                    <a href="/#">
+                        <img class="mainLogo" src="/Image/fireCamp.png" alt="feu de camp">
+                        </a>
                 </div>
              </h1>
              <p class="title">FRAME SURVIVAL</p>
@@ -21,9 +23,8 @@
             <div>
                 <nav>
                     <ul>
-                        <li><a class="accueil" href="#">ACCUEIL</a></li>
+                        <li><a class="accueil" href="/#ancre1">ACCUEIL</a></li>
                         <li><a class="stage" href="/Link/stageType.html">STAGES</a></li>
-                        <li><a class="contacts" href="/Link/Contacts.html">CONTACTS</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,7 +36,7 @@
         <label id="hamburger-logo" for="hamburger">☰</label>
         <!-- Le reste du menu -->
         <nav class="burgerLinks">
-          <a href="#">Accueil</a>
+          <a href="/#">Accueil</a>
           <a href="/Link/stageType.html">Stages</a>
           <a href="/Link/Contacts.html">Contacts</a>
         </nav>
@@ -43,89 +44,126 @@
 
 </header>
 <main>
-
-    <section  >
-        <section class="formContainer">
-            <form method="get" action="formFirst">
-            
-                <p class="contactContainer">
+    <section>
+        <p class="titleMapAdress">
+            WIGI Bordeaux Lac - 1 Avenue des 40 Journaux</p>
+        <div class="mapAdresse">
+            <img class="imageAdress" src="/Image/adresse.png" alt="map de l'adresse">
+        </div>
+    </section>
+    <section class="formContainer">
+        <form method="get" action="formFirst">
+        <div class="formContainerTitle">
+            Formulaire d'inscription pour un Stage
+        </div>
+            <p class="contactContainer">
+                <fieldset>
+                    <label class="titleLabelForm">Votre prenom</label> <input type="text" name="prenom" id="prenom" size="50" maxlength="20" placeholder="Inscrivez votre prénom..." value="">
+                    
                     <fieldset>
-                        <label>Votre prenom</label>: <input type="text" name="prenom" id="prenom" size="50" maxlength="20" placeholder="Inscrivez votre prénom..." value="">
-                        <label>Votre nom</label>: <input type="text" name="nom" id="nom" size="50" maxlength="20" placeholder="Inscrivez votre nom..." value="">
-                        <label>email</label>: <input type="email" name="email" id="email" size="50" maxlength="20" placeholder="Inscrivez votre email..." value="">
-    <!-- ---------------------------------ajouter choix du nombre de participants ---------------------------------->
+                        <p class="particantsNumber">
+                            <label class="titleLabelForm" for="panticipants">Combien de participants?
+                                <select name="participants" id="pays">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                </select>
+                                    
+                            </label>
+                        </p>
                     </fieldset>
-                </p>
-                <p> 
-                    <fieldset class="objectschoice">
-                        <legend>Choisissez 2 objets maximums sur les 10 que vous pourrez utiliser pendant le stage</legend>
-                        <label for="objectschoice"></label>: <input type="checkbox" name="couteau" id="couteau">couteau
-                        <label for="objectschoice"></label>: <input type="checkbox" name="allume-feu" id="allume-feu">allume-feu
-                        <label for="objectschoice"></label>: <input type="checkbox" name="casserole" id="casserole">casserole
-                        <label for="objectschoice"></label>: <input type="checkbox" name="moustiquaire" id="moustiquaire">moustiquaire
-                        <label for="objectschoice"></label>: <input type="checkbox" name="hachette" id="hachette">hachette
-                        <label for="objectschoice"></label>: <input type="checkbox" name="scotch" id="scotch">scotch
-                        <label for="objectschoice"></label>: <input type="checkbox" name="fil de fer" id="fil de fer">fil de fer
-                        <label for="objectschoice"></label>: <input type="checkbox" name="bache" id="bache">bache
-                        <label for="objectschoice"></label>: <input type="checkbox" name="hameçons" id="hameçons">hameçons
-                        <label for="objectschoice"></label>: <input type="checkbox" name="arc" id="arc">arc
-                    </fieldset>
-                </p>
-                <!-------------------- comment limiter le choix a 2 items sur 10-------------------------------------->
-                <p>
-                    <fieldset class="levelType">
-                        <label>Niveau Débutant</label>: <input type="radio" name="level1" id="level1" size="50" value="Niveau débutant">
-                        <label>Niveau Intermédiaire</label>: <input type="radio" name="age2" id="age2" size="50" value="Niveau intermédiaire">
-                        <label>Niveau Expert</label>: <input type="radio" name="age3" id="age3" size="50"  value="Niveau Expert">
-                    </fieldset>
-                </p>
-                <P class="comments">
-                    <textarea name="commentaires" id="commentaires" cols="30" rows="10" placeholder="Inscrivez toute demande complémentaire (150 caractères maximums)..." maxlength="150"></textarea>
-                </P>
-                <p class="country">
-                    <label for="pays">de quel pays venez vous?
-                        <select name="pays" id="pays">
-                            <option value="sénégal">Sénégal</option>
-                            <option value="Brésil">Brésil</option>
-                            <option value="France">France</option>
-                            <option value="Italie">Italie</option>
-                        </select>
-                            
-                    </label>
-                </p>
+                    
+<!-- ---------------------------------ajouter choix du nombre de participants ---------------------------------->
+                </fieldset>
+                
+                <fieldset>
+                    <label class="titleLabelForm">Votre nom</label> <input type="text" name="nom" id="nom" size="50" maxlength="20" placeholder="Inscrivez votre nom..." value="">
+                </fieldset>
+                <fieldset>
+                    <label class="titleLabelForm">Email</label> <input type="email" name="email" id="email" size="50" maxlength="40" placeholder="Inscrivez votre email..." value="">
+                </fieldset>
+            </p>
+           
+            
+            <p> 
                 <div>
-                    <fieldset class="validationForm">
-                        <p>Un clic pour l'enfer</p>
-                        <input type="submit" value="inscription"> 
+                    <fieldset  class="titleLabelForm2">
+                        Choisissez 2 objets maximums sur les 10 que vous pourrez utiliser pendant le stage: 
+                    </fieldset>
+                    <fieldset class="objectsChoiceTitle">
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="couteau" id="couteau">couteau
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="allume-feu" id="allume-feu">allume-feu
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="casserole" id="casserole">casserole
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="moustiquaire" id="moustiquaire">moustiquaire
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="hachette" id="hachette">hachette
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="scotch" id="scotch">scotch
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="fil de fer" id="fil de fer">fil de fer
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="bache" id="bache">bache
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="hameçons" id="hameçons">hameçons
+                        <label for="objectsChoice"></label> <input class="checkLabelForm" type="checkbox" name="arc" id="arc">arc
                     </fieldset>
                 </div>
-            </form>
-    </section>
-    <section >
-        <p></p>
+                    
+            </p>
+            <!-------------------- comment limiter le choix a 2 items sur 10-------------------------------------->
+            <p>
+                <fieldset class="levelType">
+                    <p class="titleLabelForm3">
+                        Niveau
+                    </p>
+                    <fieldset class="levelChoice">
+                        <label class="checkLabelForm">Débutant</label> <input type="radio" name="level" id="level1" size="50" value="Niveau débutant">
+                        <label class="checkLabelForm">Intermédiaire</label> <input type="radio" name="level" id="level2" size="50" value="Niveau intermédiaire">
+                        <label class="checkLabelForm">Expert</label> <input type="radio" name="level" id="level3" size="50"  value="Niveau Expert">
+                    </fieldset>
+                </fieldset>
+                
+            </p>
+            <div class="commentsBox">
+                <p class="comments">
+                    <label class="titleLabelForm">Commentaires</label><textarea name="commentaires" id="commentaires" cols="50" rows="10" placeholder="Inscrivez toute demande complémentaire (150 caractères maximums)..." maxlength="300"></textarea>
+                </p>
+            </div>
+            
+            <div>
+                <div class="validationForm">
+                    <fieldset class="validationTitle">Cliques pour rejoindre les enfers</fieldset>
+                    <input class="validationTitle" type="submit" size="50" value="Validation&Inscription"> 
+                </div>
+            </div>
+        </form>
     </section>
 </main>
 <footer>
-    <div class="footer">
-        <div class="logoFooter">
+    <div class="footerContainer">
+        <div class="footer">
             <a href="/index.html#ancre1"><img class="downLogo" src="/Image/fireCampNB.png" alt="feu de camp noir et blanc"></a>
-<!-- ---------------------ancre pour un retour en haut de la page index.html --------------------------- -->
-
-        </div>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="Navigation/facebook.html"> 
+                    <img class="socialMedia" src="/Image/facebookIcon.png" alt="logo facebook"></a></li>
+                <li><a href="Navigation/instagram.html"> 
+                    <img class="socialMedia" src="/Image/instagram.png" alt="logo instagram"></a></li>
+                <li><a href="www.github.com/k8vlar/">
+                    <img class="socialMedia" src="/Image/github.png" alt="logo instagram"></a></li>
+                <li><a href="/Link/legalmentions.html"> <p class="legalMention">Mentions légales</p></a></li>
+            </ul>
+        </nav>
     </div>
-            <div class="footerContainer">
-                <nav>
-                    <ul>
-                        <li><a href="Navigation/facebook.html"> 
-                            <img class="socialMedia" src="/Image/facebookIcon.png" alt="logo facebook"></a></li>
-                        <li><a href="Navigation/instagram.html"> 
-                            <img class="socialMedia" src="/Image/instagram.png" alt="logo instagram"></a></li>
-                        <li><a href="www.github.com/k8vlar/">
-                            <img class="socialMedia" src="/Image/github.png" alt="logo instagram"></a></li>
-                        <li><a href="/Link/legalmentions.html"> <p class="legalMention">Mentions légales</p></a></li>
-                    </ul>
-                </nav>
-            </div> 
+</div>
 </footer>
 </body>
 </html>
